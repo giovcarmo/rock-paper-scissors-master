@@ -1,13 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+html,
+body {
+    height: 100%;
+}
+
 body {
     font-family: 'Barlow Semi Condensed', sans-serif;
     background: linear-gradient(to bottom right, var(--Radial-Gradient));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
     color: white;
-    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
 }
 
 .container {
@@ -60,7 +68,7 @@ body {
     justify-content: center;
 }
 
-.container .game .triangle{
+.container .game .triangle {
     background-image: url('../images/bg-triangle.svg');
     background-repeat: no-repeat;
     background-position: center;
@@ -74,7 +82,6 @@ body {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-
 }
 
 .container .game .triangle .option,
@@ -93,7 +100,7 @@ body {
 
 .container .game .triangle .option:hover,
 .container .game #result .option:hover {
-    transform: translateY(-2px);    
+    transform: translateY(-2px);
 }
 
 .container .game .triangle .option:active,
@@ -104,25 +111,25 @@ body {
 .container .game .triangle .option.option--paper,
 .container .game #result .option.option--paper {
     border: 20px solid var(--Blue500);
-    box-shadow: 
-    inset 0 6px rgba(0, 0, 0, 0.15),
-    0px 7px 0px var(--Blue700);
+    box-shadow:
+        inset 0 6px rgba(0, 0, 0, 0.15),
+        0px 7px 0px var(--Blue700);
 }
 
 .container .game .triangle .option.option--scissors,
 .container .game #result .option.option--scissors {
     border: 20px solid var(--Gold500);
-    box-shadow: 
-    inset 0 6px rgba(0, 0, 0, 0.15),
-    0px 7px 0px var(--Gold600);
+    box-shadow:
+        inset 0 6px rgba(0, 0, 0, 0.15),
+        0px 7px 0px var(--Gold600);
 }
 
 .container .game .triangle .option.option--rock,
 .container .game #result .option.option--rock {
     border: 20px solid var(--Red600);
-    box-shadow: 
-    inset 0 6px rgba(0, 0, 0, 0.15),
-    0px 7px 0px var(--Red800);
+    box-shadow:
+        inset 0 6px rgba(0, 0, 0, 0.15),
+        0px 7px 0px var(--Red800);
 }
 
 .container .rules-container {
@@ -130,7 +137,6 @@ body {
     width: 100%;
     display: flex;
     justify-content: flex-end;
-    margin-right: 50px;
 }
 
 .container .rules-container .rules-button {
@@ -143,6 +149,7 @@ body {
     font-size: 12px;
     cursor: pointer;
     transition: background-color 0.2s, color 0.2s;
+    margin: 0px 50px 50px 0px;
 }
 
 .container .rules-container .rules-button:hover {
@@ -203,6 +210,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 40px;
 }
 
 .container .game #result {
@@ -210,7 +218,7 @@ body {
 }
 
 .container .game .result-container .picked,
-.container .game .result-container .house-picked { 
+.container .game .result-container .house-picked {
     text-align: center;
     font-size: 18px;
     font-weight: 600;
@@ -265,56 +273,187 @@ body {
     color: var(--Red600);
 }
 
-.option.bigger {
+.container .game #result .result-container .option.bigger {
     width: 200px !important;
     height: 200px !important;
 }
 
 .winner {
-  position: relative;
-  z-index: 2;
-  overflow: visible;
+    position: relative;
+    z-index: 2;
+    overflow: visible;
 }
 
-/* Efeito de anéis */
+/* Ring Effects */
 .winner::before,
 .winner::after,
 .winner::marker {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 200%;
-  height: 200%;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(255, 255, 255, 0.05);
-  z-index: -1;
-  animation: pulse 1.5s infinite ease-out;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.05);
+    z-index: -1;
+    animation: pulse 1.5s infinite ease-out;
 }
 
-/* Segundo anel com atraso para dar o efeito em camadas */
 .winner::after {
-  animation-delay: 0.5s;
+    animation-delay: 0.5s;
 }
 
-/* Terceiro anel */
 .winner::marker {
-  animation-delay: 1s;
+    animation-delay: 1s;
 }
 
-/* Animação dos anéis */
 @keyframes pulse {
-  0% {
-    transform: translate(-50%, -50%) scale(0.7);
-    opacity: 0.6;
-  }
-  70% {
-    transform: translate(-50%, -50%) scale(1.3);
-    opacity: 0.3;
-  }
-  100% {
-    transform: translate(-50%, -50%) scale(1.6);
-    opacity: 0;
-  }
+    0% {
+        transform: translate(-50%, -50%) scale(0.7);
+        opacity: 0.6;
+    }
+
+    70% {
+        transform: translate(-50%, -50%) scale(1.3);
+        opacity: 0.3;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1.6);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .container .score {
+        width: 90%;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 376px) {
+    .container .score {
+        line-height: 16px;
+        border-radius: 8px;
+        padding: 10px 10px 10px 20px;
+    }
+
+    .container .score .title {
+        font-size: 20px;
+    }
+
+    .container .score .score-board {
+        width: 70px;
+        height: 60px;
+        border-radius: 5px;
+    }
+
+    .container .score .score-board .score-text {
+        font-size: 11px;
+        padding-bottom: 4px;
+    }
+
+    .container .score .score-board .score-number {
+        font-size: 35px;
+        padding-bottom: 8px;
+    }
+
+    .container .rules-container .rules-content {
+        width: 100%;
+        height: 100%;
+        border-radius: 0px;
+    }
+
+    .container .rules-container .rules-content .close img {
+        top: 85%;
+        right: 47%;
+    }
+
+    .container .game .triangle,
+    .container .game #result {
+        width: 300px;
+    }
+
+    .container .game .triangle .option,
+    .container .game #result .option {
+        width: 120px;
+        height: 120px;
+        margin: 15px;
+    }
+
+    .container .game .result-container .not-picked {
+        width: 120px;
+        height: 120px;
+        margin: 15px;
+    }
+
+    .container .game .triangle .option.option--paper,
+    .container .game #result .option.option--paper {
+        border: 12px solid var(--Blue500);
+    }
+
+    .container .game .triangle .option.option--scissors,
+    .container .game #result .option.option--scissors {
+        border: 12px solid var(--Gold500);
+    }
+
+    .container .game .triangle .option.option--rock,
+    .container .game #result .option.option--rock {
+        border: 12px solid var(--Red600);
+    }
+
+    .container .rules-container {
+        justify-content: center;
+    }
+
+    .container .rules-container .rules-button {
+        margin: 0px 0px 20px 0px;
+        padding: 10px 30px;
+    }
+
+    .container .game #result .result-container .option.bigger {
+        width: 120px !important;
+        height: 120px !important;
+    }
+
+    .container .game .result-container .picked,
+    .container .game .result-container .house-picked {
+        font-size: 12px;
+        padding-bottom: 10px;
+        letter-spacing: 1.7px;
+    }
+
+    .container .game .result-container>div:first-child,
+    .container .game .result-container>div:last-child {
+        width: 40%;
+    }
+
+    .container .game .result-container>div:first-child,
+    .container .game .result-container>div:last-child {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .container .game .result-container>div:first-child,
+    .container .game .result-container>div:last-child {
+        order: 1;
+    }
+
+    .container .game .result-container>div.result-message {
+        order: 2;
+        margin-top: 2rem;
+    }
+
+    .container .game .result-container {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .container .game .result-container .result-message .result-title {
+        font-size: 45px;
+    }
 }
