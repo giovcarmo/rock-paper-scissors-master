@@ -1,3 +1,14 @@
+/* RULES BUTTON */
+var rulesButton = document.querySelector('.rules-button');
+var rulesContent = document.querySelector('.rules-container');
+rulesButton.addEventListener('click', function () {
+    rulesContent.classList.toggle('open');
+});
+/* CLOSE BUTTON */
+var closeButton = document.querySelector('.close');
+closeButton.addEventListener('click', function () {
+    rulesContent.classList.remove('open');
+});
 /* SCORE */
 var scoreNumber = document.getElementById('score-number');
 var score = 0;
@@ -20,17 +31,6 @@ function determineWinner(playerChoice, computerChoice) {
     }, 6000);
     return playerWins ? 'You win' : 'You lose';
 }
-/* RULES BUTTON */
-var rulesButton = document.querySelector('.rules-button');
-var rulesContent = document.querySelector('.rules-container');
-rulesButton.addEventListener('click', function () {
-    rulesContent.classList.toggle('open');
-});
-/* CLOSE BUTTON */
-var closeButton = document.querySelector('.close');
-closeButton.addEventListener('click', function () {
-    rulesContent.classList.remove('open');
-});
 /* GAME PAGE */
 document.addEventListener('DOMContentLoaded', function () {
     var resultDiv = document.getElementById('result');
