@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/variables.css">
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+
+<body>
+    <section class="container">
+        <div class="score">
+            <h1 class="title">ROCK<br />PAPER<br />SCISSORS</h1>
+            <div class="score-board">
+                <span class="score-text">SCORE</span>
+                <span class="score-number" id="score-number">0</span>
+            </div>
+        </div>
+        <div class="game" id="game">
+            <div id="result"></div>
+            <div class="triangle">
+                <div class="option option--paper" id="paper">
+                    <img src="src/images/icon-paper.svg" alt="Paper">
+                </div>
+                <div class="option option--scissors" id="scissors">
+                    <img src="src/images/icon-scissors.svg" alt="Scissors">
+                </div>
+                <div class="option option--rock" id="rock">
+                    <img src="src/images/icon-rock.svg" alt="Rock">
+                </div>
+            </div>
+        </div>
+        <div class="rules-container">
+            <button class="rules-button">RULES</button>
+            <div class="rules-content">
+                <h2 class="rules-title">RULES</h2>
+                <img src="src/images/image-rules.svg" alt="Rules Image" class="rules-image">
+                <button class="close">
+                    <img src="src/images/icon-close.svg" alt="Close Button">
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <script src="src/ts/app.js"></script>
+</body>
+
+</html>
