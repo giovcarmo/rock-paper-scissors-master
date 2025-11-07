@@ -10,6 +10,7 @@ Não tive tantas dificuldades mas fiz tive de usar a IA algumas vezes para tirar
 ## Tecnologias utilizadas
 - HTML
 - CSS
+- JS
 - TS
 
 
