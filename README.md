@@ -5,7 +5,7 @@ Para praticar o módulo de TypeScript, fiz um exercício do frontend mentor que 
 ## Sobre
 Não tive tantas dificuldades mas fiz tive de usar a IA algumas vezes para tirar dúvidas e resolver alguns problemas, com isso aprendi bastante, pois tive de pensar nos cenários mas não estava dando certo, até que então fui fragmentando os problemas até resolver o máximo possível sem ajuda. Eu usei ao invés do JS o TS que acabei de estudar no curso, para reforçar e praticar.
 
-![Design preview for the Rock, Paper, Scissors coding challenge](design/original/pedra-papel-tesoura.gif)
+![Design preview for the Rock, Paper, Scissors coding challenge](src/images/pedra-papel-tesoura.gif)
 
 ## Tecnologias utilizadas
 - HTML
