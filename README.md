@@ -5,7 +5,7 @@ Neste desafio foi pedido para criar um joguinho de pedra papel tesoura, com algu
 ## Sobre
 Não tive tantas dificuldades mas fiz tive de usar a IA algumas vezes para tirar dúvidas e resolver alguns problemas. Eu usei ao invés do JS o TS que acabei de estudar no curso, reforçando o módulo.
 
-![Design preview for the Rock, Paper, Scissors coding challenge](preview.jpg)
+![Design preview for the Rock, Paper, Scissors coding challenge](design/original/pedra-papel-tesoura.gif)
 
 ## Tecnologias utilizadas
 - HTML
